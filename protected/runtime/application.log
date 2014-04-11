@@ -1,0 +1,284 @@
+2014/04/09 17:42:27 [error] [php] Undefined variable: model (/Users/kevin/Webs/werkstatt/protected/views/message/new.php:20)
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(869): MessageController->renderFile()
+#1 /Users/kevin/Webs/yii1114/framework/web/CController.php(782): MessageController->renderPartial()
+#2 /Users/kevin/Webs/werkstatt/protected/controllers/MessageController.php(17): MessageController->render()
+#3 /Users/kevin/Webs/yii1114/framework/web/actions/CInlineAction.php(49): MessageController->actionNew()
+#4 /Users/kevin/Webs/yii1114/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/kevin/Webs/yii1114/framework/web/CController.php(286): MessageController->runAction()
+#6 /Users/kevin/Webs/yii1114/framework/web/CController.php(265): MessageController->runActionWithFilters()
+#7 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): MessageController->run()
+#8 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/kevin/Webs/werkstatt/index.php(13): CWebApplication->run()
+REQUEST_URI=/werkstatt/message/new
+in /Users/kevin/Webs/werkstatt/protected/views/message/new.php (20)
+in /Users/kevin/Webs/werkstatt/protected/controllers/MessageController.php (17)
+in /Users/kevin/Webs/werkstatt/index.php (13)
+2014/04/09 17:42:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "new".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('new')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/new
+---
+2014/04/09 17:43:55 [error] [exception.CException] exception 'CException' with message 'Property "MessageController.model" is not defined.' in /Users/kevin/Webs/yii1114/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/kevin/Webs/werkstatt/protected/controllers/MessageController.php(17): CComponent->__get('model')
+#1 /Users/kevin/Webs/yii1114/framework/web/actions/CInlineAction.php(49): MessageController->actionNew()
+#2 /Users/kevin/Webs/yii1114/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/kevin/Webs/yii1114/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Users/kevin/Webs/yii1114/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('new')
+#6 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/new')
+#7 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/werkstatt/message/new
+---
+2014/04/09 21:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/index.php/site/index
+---
+2014/04/09 21:19:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/index.php/site/page?view=about
+---
+2014/04/09 21:19:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/index.php/site/contact
+---
+2014/04/09 21:19:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/index.php/site/login
+---
+2014/04/09 21:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/index.php/site/contact
+---
+2014/04/09 21:32:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:34:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:34:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "src".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('src')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('src')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/src/boo...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/src/bootstrap-wysihtml5.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:34:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "lib".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('lib')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('lib')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/lib/css...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/lib/css/bootstrap3-wysiwyg5-color.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:35:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:35:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "src".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('src')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('src')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/src/boo...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/src/bootstrap-wysihtml5.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:35:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "lib".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('lib')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('lib')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/lib/css...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/lib/css/bootstrap3-wysiwyg5-color.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "src".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('src')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('src')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/src/boo...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/src/bootstrap-wysihtml5.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:38:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:38:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "src".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('src')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('src')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/src/boo...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/src/bootstrap-wysihtml5.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "src".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('src')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('src')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/src/boo...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/src/bootstrap-wysihtml5.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:39:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:39:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "src".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('src')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('src')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/src/boo...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/src/bootstrap-wysihtml5.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/09 21:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/index.php/site/index
+---
+2014/04/09 21:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "src".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('src')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('src')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('site/src/bootst...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/index.php/site/src/bootstrap-wysihtml5.css
+HTTP_REFERER=http://localhost/werkstatt/index.php/site/index
+---
+2014/04/11 17:16:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/11 17:17:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "src".' in /Users/kevin/Webs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kevin/Webs/yii1114/framework/web/CController.php(270): CController->missingAction('src')
+#1 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(282): CController->run('src')
+#2 /Users/kevin/Webs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/src/boo...')
+#3 /Users/kevin/Webs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kevin/Webs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/src/bootstrap-wysihtml5.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
