@@ -33,7 +33,13 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+        <!-- jquery.oembed -->
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.oembed.css" />
+        <script src= "<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.oembed.js"></script>
+        <!-- end jquery.oembed -->
 
 
     </head>
@@ -42,7 +48,7 @@
 
         <!--
         <div id="header">
-            <div id="logo"><?php //echo CHtml::encode(Yii::app()->name);     ?></div>
+            <div id="logo"><?php //echo CHtml::encode(Yii::app()->name);           ?></div>
         </div><!-- header -->
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -68,7 +74,7 @@
                         </a>
                     </li>
                 </ul>
-                
+
             </div>
         </div>
 
@@ -79,8 +85,8 @@
             ));
             ?><!-- breadcrumbs -->
         <?php endif ?>
-            
-            
+
+
         <?php echo $content; ?>
 
         <div class="clear"></div>

@@ -30,38 +30,38 @@ class MessageController extends Controller {
             //Schicke alle 10 Sekunden neue Nachrichten
             //Lade Nachrichten der letzten 24 Stunden (max 10 Nachrichten)
             $criteria = new CDbCriteria;
-            $criteria->select = 'id, text, created';
+            $criteria->select = 'id, text, created, infotype';
             $criteria->addCondition('board = "1"');
             $criteria->addCondition('deleted IS NULL');
 
 
 
             if ($lastPushedMessageID == 0) {
-                $aDay = 60 * 60 * 24 * 7;
+                $aDay = 60 * 60 * 24;
                 $now = new CDbExpression("(NOW()-$aDay)");
                 $criteria->addCondition('created > "' . $now . '"');
+                $criteria->order = "id DESC"; //id DESC
             } else {
                 $criteria->addCondition('published = "0"');
                 $criteria->addCondition('id > "' . $lastPushedMessageID . '"');
             }
 
             $criteria->limit = 10;
-            $criteria->order = "id ASC"; //id DESC
 
             $messages = Messages::model()->findAll($criteria);
-            var_dump($messages);
 
             if (is_array($messages)) {
+                if ($lastPushedMessageID == 0) {
+                    $messages = array_reverse($messages);
+                }
                 foreach ($messages as $message) {
-                    //Wenn ID groesser als zuletzt gesendete Nachricht, schicke wieder raus.
-                    if ($message->id > $lastPushedMessageID) {
                         echo "event:messages\n";
                         echo "id:$message->id\n";
-                        $data = json_encode(array("text" => $message->text, "created" => $message->created));
+                        $data = json_encode(array("text" => $message->text, "created" => $message->created, "infotype" => $message->infotype));
                         echo "data:$data\n";
                         echo "\n\n";
                         $lastPushedMessageID = $message->id;
-                    }
+                    
                 }
             } else {
                 if (!$messages->id) {
@@ -89,8 +89,9 @@ class MessageController extends Controller {
         if (isset($_POST['message'])) {
 
             $this->model->text = $_POST['message'];
-            $this->model->board = 1;
-            
+            $this->model->board = $_POST['board'];
+            $this->model->infotype = $_POST['infotype'];
+
             if ($this->model->validate()) {
                 if ($this->model->save()) {
                     // Validate ok! Saving your data from form okay!
@@ -109,7 +110,7 @@ class MessageController extends Controller {
             // Validate not ok! 
 // Send a response back!
             header('Content-type: application/json');
-            echo json_encode(array('result' => false, 'data' => 'No Valid Data')); // Use CJSON::encode() instead of json_encode() if you are encoding a Yii model
+            echo json_encode(array('result' => false, 'data' => 'Validation Failed, No Valid Data', 'postdata' => $_POST)); // Use CJSON::encode() instead of json_encode() if you are encoding a Yii model
             Yii::app()->end(); // Properly end the appÏ
         }
     }

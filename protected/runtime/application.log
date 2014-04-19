@@ -9466,3 +9466,71 @@ Stack trace:
 REQUEST_URI=/werkstatt/message/push2
 in /Users/kkrieger/htdocs/werkstatt/protected/controllers/MessageController.php (75)
 in /Users/kkrieger/htdocs/werkstatt/index.php (13)
+2014/04/19 10:31:49 [error] [php] Undefined index: board (/Users/kkrieger/htdocs/werkstatt/protected/controllers/MessageController.php:92)
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CController.php(286): MessageController->runAction()
+#1 /Users/kkrieger/htdocs/yii1114/framework/web/CController.php(265): MessageController->runActionWithFilters()
+#2 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(282): MessageController->run()
+#3 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Users/kkrieger/htdocs/werkstatt/index.php(13): CWebApplication->run()
+REQUEST_URI=/werkstatt/message/ajax
+in /Users/kkrieger/htdocs/werkstatt/protected/controllers/MessageController.php (92)
+in /Users/kkrieger/htdocs/werkstatt/index.php (13)
+2014/04/19 10:38:23 [error] [php] Undefined index: infotype (/Users/kkrieger/htdocs/werkstatt/protected/controllers/MessageController.php:93)
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CController.php(286): MessageController->runAction()
+#1 /Users/kkrieger/htdocs/yii1114/framework/web/CController.php(265): MessageController->runActionWithFilters()
+#2 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(282): MessageController->run()
+#3 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /Users/kkrieger/htdocs/werkstatt/index.php(13): CWebApplication->run()
+REQUEST_URI=/werkstatt/message/ajax
+in /Users/kkrieger/htdocs/werkstatt/protected/controllers/MessageController.php (93)
+in /Users/kkrieger/htdocs/werkstatt/index.php (13)
+2014/04/19 11:05:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in /Users/kkrieger/htdocs/yii1114/framework/web/CController.php:483
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('message/view')
+#3 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/werkstatt/message/2
+---
+2014/04/19 11:31:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/19 11:31:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "src/bootstrap-wysihtml5.js".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('src/bootstrap-w...')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/src/bootstrap-wysihtml5.js
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/19 11:42:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery.oembed.css".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('css/jquery.oemb...')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/css/jquery.oembed.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---
+2014/04/19 11:42:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/jquery.oembed.css".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('css/jquery.oemb...')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/css/jquery.oembed.css
+HTTP_REFERER=http://localhost/werkstatt/message/new
+---

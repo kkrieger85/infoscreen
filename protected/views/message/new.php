@@ -4,7 +4,7 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="col-lg-12 col-md-12" id="messages">
+<div class="col-lg-9 col-md-9" id="messages">
     <div id="txtResult" class=" news well">
         <div id="message" class="alert"></div>
         <button id="newMessage" type="button" class="btn btn-success">Noch eine Nachricht schreiben</button>
@@ -26,7 +26,7 @@
                 "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
                 "emphasis": true, //Italics, bold, etc. Default true
                 "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
-                "html": false, //Button which allows you to edit the generated HTML. Default false
+                "html": true, //Button which allows you to edit the generated HTML. Default false
                 "link": true, //Button to insert a link. Default true
                 "image": true, //Button to insert an image. Default true,
                 "color": true, //Button to change color of font
@@ -36,13 +36,15 @@
 
             $('#txtSubmit').click(function() {
                 bshtml = $('#txtContent').val();
-                console.log("Inhalt: " + bshtml);
+                board = $('#board').find(":selected").val();
+                infotype = $('#infotype').find(":selected").val();
+
                 $.ajax({
                     type: "POST",
                     url: '<?php echo Yii::app()->createAbsoluteUrl("message/ajax"); ?>',
-                    data: {message: bshtml},
+                    data: {message: bshtml, board: board, infotype: infotype},
                     success: function(mes, status) {
-                        if (mes.result) {
+                        if (mes.result === true) {
                             $('#txtInput').hide();
                             $('#txtResult').show();
                             $('#message').addClass('alert-success');
@@ -50,14 +52,21 @@
                         } else {
                             $('.modal-content .alert').html(mes.data);
                             $('.modal-content .alert').addClass('alert-danger');
+
                             $('#alertBox').modal({keyboard: true})
-                            if (mes.model) {
-                                console.log("Model: ", mes.model);
-                            }
+
+//                            console.log("Fehler: ", mes.data);
+//
+//                            if (mes.model) {
+//                                console.log("Model: ", mes.model);
+//                            }
+//                            if (mes.postdata) {
+//                                console.log("POST: ", mes.postdata);
+//                            }
                         }
 
-                        console.log("Mes:", mes);
-                        console.log(status);
+//                        console.log("Mes:", mes);
+//                        console.log(status);
 
                     },
                     error: function() {
@@ -77,8 +86,28 @@
     </div>
 
 </div>
-<div class="col-lg-1 col-md-1"></div>
+<div class="col-lg-3 col-md-3" id="options">
+    <div class="form-group" id="board">
 
+        <label for="board">Infoboard</label>
+        <select class="form-control">
+            <option value="1">Alle</option>
+            <option value="2">Werkstatt</option>
+            <option value="3">Plenum</option>
+            <option value="1337">Trollette</option>
+        </select>
+    </div>
+    <div class="form-group" id="infotype">
+
+        <label for="meldung">Meldung</label>
+        <select class="form-control">
+            <option value="info">Information</option>
+            <option value="warning">Hinweis</option>
+            <option value="danger">Wichtig</option>
+        </select>
+    </div>
+
+</div>
 
 
 
@@ -89,7 +118,6 @@
             <div class="modal-body">
                 <div class="alert"></div>
 
-                </button>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>

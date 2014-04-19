@@ -30,23 +30,31 @@
 
 
 <script>
-    if (typeof(EventSource) !== "undefined")
+    if (typeof (EventSource) !== "undefined")
     {
-   
+
         var source = new EventSource("<?php echo Yii::app()->createAbsoluteUrl("message/sse/"); ?>");
 
         source.addEventListener('messages', function(result) {
             if (('#' + result.lastEventId) !== '') {
                 $('#messages').prepend('<div id="' + result.lastEventId + '"><div class=" pull-right panel-heading"></div><div class="panel-body"></div></div>');
                 var resultData = $.parseJSON(result.data);
-                $('#' + result.lastEventId +' .panel-body').html(resultData.text);
-                $('#' + result.lastEventId +' .panel-heading').html(resultData.created);
-                $('#' + result.lastEventId).addClass("panel panel-primary");
+                $('#' + result.lastEventId + ' .panel-body').html(resultData.text);
+                $('#' + result.lastEventId + ' .panel-heading').html(resultData.created + " (" + result.lastEventId + ")");
+                $('#' + result.lastEventId).addClass("panel panel-" + resultData.infotype);
+                $('#' + result.lastEventId + " a.embed").oembed(null, {
+                    maxWidth: 600,
+                    maxHeight: 400,
+                    //includeHandle: true,
+                    embedMethod: 'auto',
+                });
+
                 $('#placeholder').hide();
             }
-            
+
             console.log(result);
             console.log(result.type + " " + result.lastEventId);
+
         }, false);
 
     }

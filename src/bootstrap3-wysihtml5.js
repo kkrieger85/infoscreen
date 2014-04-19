@@ -421,7 +421,8 @@
                 "wysiwyg-color-blue" : 1,
                 "wysiwyg-color-teal" : 1,
                 "wysiwyg-color-aqua" : 1,
-                "wysiwyg-color-orange" : 1
+                "wysiwyg-color-orange" : 1,
+                "embed": 1
             },
             tags: {
                 "b":  {},
@@ -451,7 +452,8 @@
                         'href': "url", // important to avoid XSS
                         'target': 'alt',
                         'rel': 'alt'
-                    }
+                    }, 
+                    set_class: "embed"
                 },
                 "span": 1,
                 "div": 1,
