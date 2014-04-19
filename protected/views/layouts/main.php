@@ -56,11 +56,38 @@
 
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="<?php echo Yii::app()->createAbsoluteUrl("message/"); ?>">
+                        <a href="<?php echo Yii::app()->createAbsoluteUrl("message/", array('board'=>1)); ?>">
                             <button type="button" class="btn btn-default navbar-btn">
                                 <span class="glyphicon glyphicon-th-list">
                                 </span>
-                                Infoscreen
+                                Infoboard
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo Yii::app()->createAbsoluteUrl("message/", array('board'=>2)); ?>">
+                            <button type="button" class="btn btn-default navbar-btn">
+                                <span class="glyphicon glyphicon-wrench">
+                                </span>
+                                Werkstatt
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo Yii::app()->createAbsoluteUrl("message/", array('board'=>3)); ?>">
+                            <button type="button" class="btn btn-default navbar-btn">
+                                <span class="glyphicon glyphicon-fire">
+                                </span>
+                                Plenum
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo Yii::app()->createAbsoluteUrl("message/", array('board'=>1337)); ?>">
+                            <button type="button" class="btn btn-default navbar-btn">
+                                <span class="glyphicon glyphicon-eye-open">
+                                </span>
+                                Trollette
                             </button>
                         </a>
                     </li>

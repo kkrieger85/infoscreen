@@ -31,7 +31,7 @@
     if (typeof (EventSource) !== "undefined")
     {
 
-        var source = new EventSource("<?php echo Yii::app()->createAbsoluteUrl("message/sse/"); ?>");
+        var source = new EventSource("<?php echo Yii::app()->createAbsoluteUrl("message/sse/board/".$board); ?>");
 
         source.addEventListener('messages', function(result) {
             if (('#' + result.lastEventId) !== '') {
@@ -40,12 +40,12 @@
                 $('#' + result.lastEventId + ' .panel-body').html(resultData.text);
                 $('#' + result.lastEventId + ' .panel-heading').html(resultData.created + " (" + result.lastEventId + ")");
                 $('#' + result.lastEventId).addClass("panel panel-" + resultData.infotype);
-//                $('#' + result.lastEventId + " a.embed").oembed(null, {
-//                    maxWidth: 600,
-//                    maxHeight: 400,
-//                    //includeHandle: true,
-//                    embedMethod: 'auto',
-//                });
+                $('#' + result.lastEventId + " a.embed").oembed(null, {
+                    maxWidth: 600,
+                    maxHeight: 400,
+                    //includeHandle: true,
+                    embedMethod: 'auto',
+                });
 
                 $('#placeholder').hide();
             }

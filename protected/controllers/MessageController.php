@@ -9,7 +9,8 @@ class MessageController extends Controller {
     }
 
     public function actionIndex() {
-        $this->render('index');
+        $board = Yii::app()->request->getQuery('board', '1');
+        $this->render('index', array("board" => $board));
     }
 
     public function actionNew() {
@@ -21,6 +22,7 @@ class MessageController extends Controller {
     }
 
     public function actionSse() {
+        $board = Yii::app()->request->getQuery('board', '1'); //Default: 1 == Nachrichten, die ueberall angezeigt werden
         header("Content-Type: text/event-stream\n\n");
         header('Cache-Control: no-cache');
 
@@ -31,7 +33,8 @@ class MessageController extends Controller {
             //Lade Nachrichten der letzten 24 Stunden (max 10 Nachrichten)
             $criteria = new CDbCriteria;
             $criteria->select = 'id, text, created, infotype';
-            $criteria->addCondition('board = "1"');
+            $criteria->addCondition('board = "'.$board.'"');
+            $board != 1?$criteria->addCondition('board = "1"', 'OR'):'';
             $criteria->addCondition('deleted IS NULL');
 
 
@@ -97,7 +100,7 @@ class MessageController extends Controller {
                     // Validate ok! Saving your data from form okay!
 // Send a response back!
                     header('Content-type: application/json');
-                    echo json_encode(array('result' => true, 'data' => 'Valid Data, Saving succeeded')); // Use CJSON::encode() instead of json_encode() if you are encoding a Yii model
+                    echo json_encode(array('result' => true, 'data' => 'Nachricht wurde gespeichert')); // Use CJSON::encode() instead of json_encode() if you are encoding a Yii model
                     Yii::app()->end(); // Properly end the appÏ
                 } else {
                     // Validate ok! Saving your data from form failed!

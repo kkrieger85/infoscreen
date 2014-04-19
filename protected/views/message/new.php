@@ -14,8 +14,55 @@
     <div id="txtInput" class=" news well ">
         <textarea id="txtContent"  placeholder="Enter text ..." style="width: 100%; height: 300px"> 
         </textarea>
+    </div>
 
-        <script type="text/javascript">
+</div>
+<div class="col-lg-3 col-md-3" id="options">
+    <div class="form-group" id="board">
+
+        <label for="board">Infoboard</label>
+        <select class="form-control">
+            <option value="1">Alle</option>
+            <option value="2">Werkstatt</option>
+            <option value="3">Plenum</option>
+            <option value="1337">Trollette</option>
+        </select>
+    </div>
+    <div class="form-group" id="infotype">
+
+        <label for="meldung">Meldung</label>
+        <select class="form-control">
+            <option value="info">Information</option>
+            <option value="warning">Hinweis</option>
+            <option value="danger">Wichtig</option>
+        </select>
+    </div>
+
+    <button id="txtSubmit" type="button" class="btn btn-primary btn-block">Speichern</button>
+
+
+</div>
+
+
+
+<!-- Modal -->
+<div id="alertBox" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="alert"></div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default " data-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+ <script type="text/javascript">
             $('#txtResult').hide();
 
             $('#txtContent').wysihtml5({
@@ -79,50 +126,3 @@
 
             });
         </script>
-
-    </div>
-
-</div>
-<div class="col-lg-3 col-md-3" id="options">
-    <div class="form-group" id="board">
-
-        <label for="board">Infoboard</label>
-        <select class="form-control">
-            <option value="1">Alle</option>
-            <option value="2">Werkstatt</option>
-            <option value="3">Plenum</option>
-            <option value="1337">Trollette</option>
-        </select>
-    </div>
-    <div class="form-group" id="infotype">
-
-        <label for="meldung">Meldung</label>
-        <select class="form-control">
-            <option value="info">Information</option>
-            <option value="warning">Hinweis</option>
-            <option value="danger">Wichtig</option>
-        </select>
-    </div>
-
-    <button id="txtSubmit" type="button" class="btn btn-primary">Speichern</button>
-
-
-</div>
-
-
-
-<!-- Modal -->
-<div id="alertBox" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="alert"></div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
-            </div>
-        </div>
-
-    </div>
-</div>
