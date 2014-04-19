@@ -12,9 +12,6 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
         <![endif]-->
 
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
         <!-- Bootstrap -->
@@ -23,60 +20,75 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/wysihtml5-0.3.0.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.7.2.min.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/src/bootstrap-wysihtml5.js" type="text/javascript"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/src/bootstrap3-wysihtml5.js" type="text/javascript"></script>
         <!-- End Bootstrap -->
 
         <!-- Need this for WYSIWYG -->
-        <link rel="stylesheet" type="text/css" href="src/bootstrap-wysihtml5.css" />
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/wysihtml5-0.3.0.js" type="text/javascript"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/src/bootstrap3-wysihtml5.js" type="text/javascript"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/src/locales/bootstrap-wysihtml5.de-DE.js" type="text/javascript"></script>
         <!-- End WYSIWYG -->
 
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/holder.js"></script>
 
+        <!-- Eigenes CSS -->
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     </head>
 
     <body>
 
-        <div class="container" id="page">
+        <!--
+        <div id="header">
+            <div id="logo"><?php //echo CHtml::encode(Yii::app()->name);     ?></div>
+        </div><!-- header -->
 
-            <div id="header">
-                <div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-            </div><!-- header -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
 
-            <div id="mainmenu">
-                <?php
-                $this->widget('zii.widgets.CMenu', array(
-                    'items' => array(
-                        array('label' => 'Home', 'url' => array('/site/index')),
-                        array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-                        array('label' => 'Contact', 'url' => array('/site/contact')),
-                        array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-                        array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-                    ),
-                ));
-                ?>
-            </div><!-- mainmenu -->
-            <?php if (isset($this->breadcrumbs)): ?>
-                <?php
-                $this->widget('zii.widgets.CBreadcrumbs', array(
-                    'links' => $this->breadcrumbs,
-                ));
-                ?><!-- breadcrumbs -->
-            <?php endif ?>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="<?php echo Yii::app()->createAbsoluteUrl("message/"); ?>">
+                            <button type="button" class="btn btn-default navbar-btn">
+                                <span class="glyphicon glyphicon-th-list">
+                                </span>
+                                Infoscreen
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo Yii::app()->createAbsoluteUrl("message/new"); ?>">
+                            <button type="button" class="btn btn-primary navbar-btn">
+                                <span class="glyphicon glyphicon-pencil">
+                                </span>
+                                Neue Nachricht
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
 
-            <?php echo $content; ?>
+        <?php if (isset($this->breadcrumbs)): ?>
+            <?php
+            $this->widget('zii.widgets.CBreadcrumbs', array(
+                'links' => $this->breadcrumbs,
+            ));
+            ?><!-- breadcrumbs -->
+        <?php endif ?>
+            
+            
+        <?php echo $content; ?>
 
-            <div class="clear"></div>
+        <div class="clear"></div>
 
-            <div id="footer">
-                Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-                All Rights Reserved.<br/>
-                <?php echo Yii::powered(); ?>
-            </div><!-- footer -->
+        <div id="footer">
+            Verbesserungsvorschläge? Schick mir eine Mail an <a target="_blank" href="mailto:kkrieger85@gmail.com" >kkrieger85@gmail.com </a><br/>
+        </div><!-- footer -->
 
-        </div><!-- page -->
 
     </body>
 </html>

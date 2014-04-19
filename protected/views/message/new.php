@@ -4,52 +4,18 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
-
-    <?php
-    $form = $this->beginWidget('CActiveForm', array(
-        'id' => 'messages-new-form',
-        // Please note: When you enable ajax validation, make sure the corresponding
-        // controller action is handling ajax validation correctly.
-        // See class documentation of CActiveForm for details on this,
-        // you need to use the performAjaxValidation()-method described there.
-        'enableAjaxValidation' => false,
-        'htmlOptions' => array(
-            'onsubmit' => "return false;", /* Disable normal form submit */
-            'onkeypress' => " if(event.keyCode == 13){ send(); } " /* Do ajax call when user presses enter key */
-        ),
-    ));
-    ?>
-
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
-
-    <?php echo $form->errorSummary($model); ?>
-
-    <div class="row">
-        <?php echo $form->labelEx($model, 'text'); ?>
-        <?php echo $form->textArea($model, 'text'); ?>
-        <?php echo $form->error($model, 'text'); ?>
-    </div>
-
-
-    <div class="row buttons">
-        <?php echo CHtml::submitButton('Submit'); ?>
-    </div>
-
-    <?php $this->endWidget(); ?>
-
-</div><!-- form -->
-
-<div class="col-lg-12 col-md-12" id="content">
+<div class="col-lg-12 col-md-12" id="messages">
     <div id="txtResult" class=" news well">
         <div id="message" class="alert"></div>
+        <button id="newMessage" type="button" class="btn btn-success">Noch eine Nachricht schreiben</button>
+        <button id="showInfoscreen" type="button" class="btn">Infoscreen anzeigen</button>
     </div>
 
     <div id="txtInput" class=" news well ">
         <textarea id="txtContent"  placeholder="Enter text ..." style="width: 100%; height: 300px"> 
         </textarea>
 
-        <button id="txtSubmit" type="button" class="btn btn-primary">Primary</button>
+        <button id="txtSubmit" type="button" class="btn btn-primary">Speichern</button>
 
 
         <script type="text/javascript">
@@ -70,18 +36,27 @@
 
             $('#txtSubmit').click(function() {
                 bshtml = $('#txtContent').val();
+                console.log("Inhalt: " + bshtml);
                 $.ajax({
                     type: "POST",
-                    url: '/push/save.php',
-                    data: {html: bshtml},
+                    url: '<?php echo Yii::app()->createAbsoluteUrl("message/ajax"); ?>',
+                    data: {message: bshtml},
                     success: function(mes, status) {
+                        if (mes.result) {
+                            $('#txtInput').hide();
+                            $('#txtResult').show();
+                            $('#message').addClass('alert-success');
+                            $('#message').html(mes.data);
+                        } else {
+                            $('.modal-content .alert').html(mes.data);
+                            $('.modal-content .alert').addClass('alert-danger');
+                            $('#alertBox').modal({keyboard: true})
+                            if (mes.model) {
+                                console.log("Model: ", mes.model);
+                            }
+                        }
 
-                        $('#txtInput').hide();
-                        $('#txtResult').show();
-                        $('#message').addClass('alert-success');
-                        $('#message').html(mes.message);
-
-                        console.log(mes);
+                        console.log("Mes:", mes);
                         console.log(status);
 
                     },
@@ -89,6 +64,13 @@
                         console.log("fehler");
                     }
                 });
+                $('#newMessage').click(function() {
+                    window.location = "<?php echo Yii::app()->createAbsoluteUrl("message/new"); ?>";
+                });
+                $('#showInfoscreen').click(function() {
+                    window.location = "<?php echo Yii::app()->createAbsoluteUrl("message/"); ?>";
+                });
+
             });
         </script>
 
@@ -97,28 +79,22 @@
 </div>
 <div class="col-lg-1 col-md-1"></div>
 
-<script type="text/javascript">
-
-    function send()
-    {
-
-        var data = $("#messages-new-form").serialize();
 
 
-        $.ajax({
-            type: 'POST',
-            url: '<?php echo Yii::app()->createAbsoluteUrl("message/ajax"); ?>',
-            data: data,
-            success: function(data) {
-                alert(data);
-            },
-            error: function(data) { // if error occured
-                alert("Error occured.please try again");
-                alert(data);
-            },
-            dataType: 'html'
-        });
 
-    }
+<!-- Modal -->
+<div id="alertBox" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="alert"></div>
 
-</script>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+            </div>
+        </div>
+
+    </div>
+</div>
