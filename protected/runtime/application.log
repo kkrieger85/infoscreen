@@ -9534,3 +9534,84 @@ Stack trace:
 REQUEST_URI=/werkstatt/css/jquery.oembed.css
 HTTP_REFERER=http://localhost/werkstatt/message/new
 ---
+2014/04/19 13:27:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---
+2014/04/19 13:27:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---
+2014/04/19 13:30:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---
+2014/04/19 13:30:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---
+2014/04/19 13:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---
+2014/04/19 13:31:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---
+2014/04/19 13:32:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---
+2014/04/19 13:33:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---
+2014/04/19 13:34:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "[object Object]".' in /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/kkrieger/htdocs/yii1114/framework/web/CWebApplication.php(141): CWebApplication->runController('[object Object]')
+#1 /Users/kkrieger/htdocs/yii1114/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/kkrieger/htdocs/werkstatt/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/werkstatt/[object%20Object]
+HTTP_REFERER=http://localhost/werkstatt/message
+---

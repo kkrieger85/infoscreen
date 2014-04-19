@@ -20,10 +20,8 @@
 
     <div class="news well">
         <p class="bg-primary"><span class="glyphicon glyphicon-user">&nbsp;</span>Anwesende:</p>
-        <ul id="anwesende">
-            <li>User1</li>
-            <li>User2</li>
-            <li>User2</li>
+        <ul id="visitors">
+
         </ul>
     </div>
 </div>
@@ -42,18 +40,18 @@
                 $('#' + result.lastEventId + ' .panel-body').html(resultData.text);
                 $('#' + result.lastEventId + ' .panel-heading').html(resultData.created + " (" + result.lastEventId + ")");
                 $('#' + result.lastEventId).addClass("panel panel-" + resultData.infotype);
-                $('#' + result.lastEventId + " a.embed").oembed(null, {
-                    maxWidth: 600,
-                    maxHeight: 400,
-                    //includeHandle: true,
-                    embedMethod: 'auto',
-                });
+//                $('#' + result.lastEventId + " a.embed").oembed(null, {
+//                    maxWidth: 600,
+//                    maxHeight: 400,
+//                    //includeHandle: true,
+//                    embedMethod: 'auto',
+//                });
 
                 $('#placeholder').hide();
             }
 
-            console.log(result);
-            console.log(result.type + " " + result.lastEventId);
+            //console.log(result);
+            //console.log(result.type + " " + result.lastEventId);
 
         }, false);
 
@@ -62,5 +60,27 @@
     {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
     }
+
+
+    //var jqxhr = $.getJSON("https://spaceboard.hacksaar.de/visitors.json", function() {
+    var jqxhr = $.getJSON("<?php echo Yii::app()->request->baseUrl; ?>/src/visitors.json", function() {
+        //console.log("success");
+    })
+            .done(function(data) {
+                $.each(data, function(i, item) {
+                    $('#visitors').append("<li>" + item.name + "</li>");
+                    //console.log("item", item);
+                });
+                //console.log("second success");
+            })
+            .fail(function() {
+                $('#visitors').append("<li>Liste konnte nicht geladen werden</li>");
+
+                //console.log("error");
+            })
+            .always(function() {
+                //console.log("complete");
+            });
+
 </script>
 

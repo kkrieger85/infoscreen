@@ -15,9 +15,6 @@
         <textarea id="txtContent"  placeholder="Enter text ..." style="width: 100%; height: 300px"> 
         </textarea>
 
-        <button id="txtSubmit" type="button" class="btn btn-primary">Speichern</button>
-
-
         <script type="text/javascript">
             $('#txtResult').hide();
 
@@ -106,6 +103,9 @@
             <option value="danger">Wichtig</option>
         </select>
     </div>
+
+    <button id="txtSubmit" type="button" class="btn btn-primary">Speichern</button>
+
 
 </div>
 
