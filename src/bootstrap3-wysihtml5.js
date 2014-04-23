@@ -453,7 +453,11 @@
                         'target': 'alt',
                         'rel': 'alt'
                     }, 
-                    set_class: "embed"
+                    set_class: "embed",
+                    "set_attributes": {
+                        "rel": "nofollow",   // optional
+                        "target": "_blank"   // optional
+                      }
                 },
                 "span": 1,
                 "div": 1,
@@ -463,7 +467,7 @@
             }
         },
         stylesheets: ["./css/bootstrap3-wysiwyg5-color.css"], // (path_to_project/lib/css/bootstrap3-wysiwyg5-color.css)
-        locale: "en"
+        locale: "de"
     };
 
     if (typeof $.fn.wysihtml5.defaultOptionsCache === 'undefined') {
